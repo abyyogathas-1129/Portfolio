@@ -43,7 +43,7 @@ function App() {
           <div className={`nav-links ${menuOpen ? 'is-open' : ''}`} id="nav-links">
             {navItems.map((item) => <button key={item} onClick={() => goTo(item)}>{item}</button>)}
           </div>
-          <a className="button button-primary nav-cta nav-download" href="/assets/kirushnavy-yogathas-resume.pdf" download>Download CV</a>
+          <a className="button button-primary nav-cta nav-download" href={`${import.meta.env.BASE_URL}assets/kirushnavy-yogathas-resume.pdf`} download>Download CV</a>
         </nav>
       </header>
 
@@ -66,10 +66,10 @@ function App() {
           </div>
 
           <div className="portrait-orbit" aria-label="Kirushnavy portrait placeholder">
-            <img className="orbit orbit-cyan" src="/assets/orbit-cyan.svg" alt="" />
-            <img className="orbit orbit-berry" src="/assets/orbit-berry.svg" alt="" />
-            <img className="orbit orbit-violet" src="/assets/orbit-violet.svg" alt="" />
-            <div className="portrait"><img className="portrait-photo" src="/assets/portrait.png" alt="Kirushnavy Yogathas" /></div>
+            <img className="orbit orbit-cyan" src={`${import.meta.env.BASE_URL}assets/orbit-cyan.svg`} alt="" />
+            <img className="orbit orbit-berry" src={`${import.meta.env.BASE_URL}assets/orbit-berry.svg`} alt="" />
+            <img className="orbit orbit-violet" src={`${import.meta.env.BASE_URL}assets/orbit-violet.svg`} alt="" />
+            <div className="portrait"><img className="portrait-photo" src={`${import.meta.env.BASE_URL}assets/portrait.png`} alt="Kirushnavy Yogathas" /></div>
             <span className="orbit-tag tag-ai">AI</span><span className="orbit-tag tag-data">DATA</span><span className="orbit-tag tag-python">PYTHON</span>
           </div>
         </section>
