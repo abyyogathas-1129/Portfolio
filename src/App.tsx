@@ -43,7 +43,10 @@ function App() {
           <div className={`nav-links ${menuOpen ? 'is-open' : ''}`} id="nav-links">
             {navItems.map((item) => <button key={item} onClick={() => goTo(item)}>{item}</button>)}
           </div>
-          <a className="button button-primary nav-cta nav-download" href={`${import.meta.env.BASE_URL}assets/kirushnavy-yogathas-resume.pdf`} download>Download CV</a>
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <a className="button button-primary nav-cta nav-download" href={`${import.meta.env.BASE_URL}assets/kirushnavy-yogathas-resume.pdf`} target="_blank" rel="noreferrer">View CV</a>
+            <a className="button button-primary nav-cta nav-download" href={`${import.meta.env.BASE_URL}assets/kirushnavy-yogathas-resume.pdf`} download>Download CV</a>
+          </div>
         </nav>
       </header>
 
@@ -56,7 +59,6 @@ function App() {
             <p className="hero-intro">Exploring data science, artificial intelligence, Python, and machine learning—while building practical software that helps people learn and decide.</p>
             <div className="hero-actions">
               <button className="button button-primary" onClick={() => goTo('projects')}>View selected work</button>
-              <a className="button button-outline" href={`${import.meta.env.BASE_URL}assets/kirushnavy-yogathas-resume.pdf`} target="_blank" rel="noreferrer">View CV</a>
               <button className="button button-outline" onClick={() => goTo('about')}>Meet Kirushnavy</button>
             </div>
             <div className="social-row">
