@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { ArrowUpRight, Code2, Globe, Mail, MapPin, ShieldCheck, Zap } from 'lucide-react'
 import './App.css'
 
 type ProjectCategory = 'All' | 'AI' | 'Mobile' | 'Learning'
@@ -132,15 +133,88 @@ function App() {
 
         <section className="section contact" id="contact">
           <div className="contact-copy">
-            <p className="eyebrow pink">LET&apos;S BUILD SOMETHING USEFUL</p><h2>Have a thoughtful opportunity?</h2>
+            <p className="eyebrow pink">LET&apos;S BUILD SOMETHING USEFUL</p>
+            <h2>Have a thoughtful opportunity?</h2>
             <p className="body-copy">I’m open to internships, junior collaborations, mentorship, and conversations about data, AI, or useful software.</p>
-            <div className="contact-links"><a href="https://github.com/abyyogathas-1129" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/kirushnavy-yogathas-81ba1b348" target="_blank" rel="noreferrer">LinkedIn ↗</a><span>Mullaitivu, Sri Lanka</span></div>
-            <a className="client-note" href="mailto:Abyyogathas@gmail.com">EMAIL · Abyyogathas@gmail.com</a>
+
+            <div className="contact-side-list">
+              <a className="contact-side-item" href="https://github.com/abyyogathas-1129" target="_blank" rel="noreferrer">
+                <span className="contact-side-icon github-side-icon"><Code2 size={18} strokeWidth={2.2} /></span>
+                <span className="contact-side-content">
+                  <span className="contact-side-label">GitHub <ArrowUpRight size={14} strokeWidth={2.2} /></span>
+                  <span className="contact-side-value">github.com/abyyogathas-1129</span>
+                </span>
+              </a>
+
+              <a className="contact-side-item" href="https://www.linkedin.com/in/kirushnavy-yogathas-81ba1b348" target="_blank" rel="noreferrer">
+                <span className="contact-side-icon linkedin-side-icon">in</span>
+                <span className="contact-side-content">
+                  <span className="contact-side-label">LinkedIn <ArrowUpRight size={14} strokeWidth={2.2} /></span>
+                  <span className="contact-side-value">linkedin.com/in/kirushnavy-yogathas-81ba1b348</span>
+                </span>
+              </a>
+
+              <div className="contact-side-item static-side-item">
+                <span className="contact-side-icon pin-side-icon"><MapPin size={18} strokeWidth={2.2} /></span>
+                <span className="contact-side-content">
+                  <span className="contact-side-label main-side-label">Mullaitivu, Sri Lanka</span>
+                  <span className="contact-side-value">Available for remote opportunities</span>
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="contact-form">
+          <div className="contact-form contact-form-custom">
+            <div className="contact-badge">
+              <ArrowUpRight size={20} strokeWidth={2.2} />
+            </div>
+
             <h3>Start a conversation</h3>
-            <p className="body-copy">The fastest way to reach me is directly by email — I check it regularly and reply personally.</p>
-            <a className="button button-primary" href="mailto:Abyyogathas@gmail.com?subject=Opportunity%20-%20Portfolio%20Contact">Email me</a>
+            <p className="body-copy contact-copy-custom">The fastest way to reach me is directly by email — I check it regularly and reply personally.</p>
+
+            <a className="contact-email-button" href="mailto:Abyyogathas@gmail.com?subject=Opportunity%20-%20Portfolio%20Contact">
+              <span className="contact-email-icon"><Mail size={20} strokeWidth={2.2} /></span>
+              <span className="contact-email-text">
+                <span className="contact-email-label">Email me</span>
+                <span className="contact-email-address">Abyyogathas@gmail.com</span>
+              </span>
+              <span className="contact-email-arrow"><ArrowUpRight size={18} strokeWidth={2.2} /></span>
+            </a>
+
+            <div className="contact-divider">OR CONNECT VIA</div>
+
+            <div className="contact-link-row">
+              <a className="contact-link-chip" href="https://www.linkedin.com/in/kirushnavy-yogathas-81ba1b348" target="_blank" rel="noreferrer">
+                <span className="contact-link-icon">in</span>
+                <span>LinkedIn</span>
+                <ArrowUpRight size={15} strokeWidth={2.2} />
+              </a>
+
+              <a className="contact-link-chip" href="https://github.com/abyyogathas-1129" target="_blank" rel="noreferrer">
+                <span className="contact-link-icon"><Code2 size={15} strokeWidth={2.2} /></span>
+                <span>GitHub</span>
+                <ArrowUpRight size={15} strokeWidth={2.2} />
+              </a>
+            </div>
+
+            <div className="contact-metrics">
+              <div className="contact-metric-item">
+                <div className="contact-metric-icon"><Zap size={16} strokeWidth={2.2} /></div>
+                <strong>Quick Response</strong>
+                <span>Usually within 24 hours</span>
+              </div>
+
+              <div className="contact-metric-item">
+                <div className="contact-metric-icon"><ShieldCheck size={16} strokeWidth={2.2} /></div>
+                <strong>Professional</strong>
+                <span>Let&apos;s build something great</span>
+              </div>
+
+              <div className="contact-metric-item">
+                <div className="contact-metric-icon"><Globe size={16} strokeWidth={2.2} /></div>
+                <strong>Open to Remote</strong>
+                <span>Working across time zones</span>
+              </div>
+            </div>
           </div>
         </section>
       </main>
