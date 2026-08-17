@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import type { FormEvent } from 'react'
 import './App.css'
 
 type ProjectCategory = 'All' | 'AI' | 'Mobile' | 'Learning'
@@ -21,7 +20,6 @@ const navItems = ['Home', 'About', 'Projects', 'Skills', 'Journey', 'Contact']
 function App() {
   const [filter, setFilter] = useState<ProjectCategory>('All')
   const [menuOpen, setMenuOpen] = useState(false)
-  const [sent, setSent] = useState(false)
   const visibleProjects = useMemo(() => filter === 'All' ? projects : projects.filter((project) => project.category === filter), [filter])
 
   const goTo = (id: string) => {
@@ -29,11 +27,7 @@ function App() {
     setMenuOpen(false)
   }
 
-  const submitContact = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    setSent(true)
-  }
-
+  
   return (
     <div className="site-shell">
       <header className="nav-wrap">
@@ -130,9 +124,9 @@ function App() {
             <p className="body-copy">A transparent record of current learning, practical work, and professional readiness.</p>
           </div>
           <div className="journey-grid">
-            <article className="journey-card cyan"><p className="eyebrow">EDUCATION</p><h3>Information Technology Undergraduate</h3><p>Higher-education programme focused on IT fundamentals and practical software development.</p><ul><li>University: details to be supplied</li><li>Expected graduation: details to be supplied</li><li>School education: details to be supplied</li><li>Relevant focus: data science, AI, Python, and machine learning</li></ul></article>
-            <article className="journey-card pink"><p className="eyebrow">EXPERIENCE &amp; LEADERSHIP</p><h3>Building toward a first professional role</h3><p>Currently seeking internships and junior collaborations while developing independent academic and personal projects.</p><ul><li>Internships or employment: not supplied</li><li>Volunteer work: not supplied</li><li>Leadership or university clubs: not supplied</li><li>Current evidence: public repositories and project documentation</li></ul></article>
-            <article className="journey-card violet"><p className="eyebrow">CERTIFICATIONS &amp; ACHIEVEMENTS</p><h3>Credentials ready to document</h3><p>This section is reserved for verified courses, workshops, competitions, hackathons, awards, and certificates.</p><ul><li>Certifications: not supplied</li><li>Workshops: not supplied</li><li>Competitions or hackathons: not supplied</li><li>Academic achievements: not supplied</li></ul></article>
+            <article className="journey-card cyan"><p className="eyebrow">EDUCATION</p><h3>BSc in Information Technology</h3><p>Higher-education programme focused on IT fundamentals and practical software development.</p><ul><li>University: University of Kelaniya, Sri Lanka</li><li>Duration: 2025 – 2028 (expected)</li><li>Relevant focus: data science, AI, Python, and machine learning</li></ul></article>
+            <article className="journey-card pink"><p className="eyebrow">EXPERIENCE &amp; LEADERSHIP</p><h3>Building toward a first professional role</h3><p>Currently seeking internships and junior collaborations while developing independent academic and personal projects.</p><ul><li>Status: open to internships and junior collaborations</li><li>Current evidence: public repositories and project documentation</li></ul></article>
+            <article className="journey-card violet"><p className="eyebrow">CERTIFICATIONS &amp; ACHIEVEMENTS</p><h3>Continuous learner</h3><p>Self-driven learning through online coursework and hands-on competitions.</p><ul><li>Coursera: [add exact course title here]</li><li>Hackathon: Participated in Artemia 1.0 — Phase 1 Ideathon, IEEE WIE Student Branch, University of Sri Jayewardenepura (Oct 2025)</li></ul></article>
           </div>
         </section>
 
@@ -141,16 +135,13 @@ function App() {
             <p className="eyebrow pink">LET&apos;S BUILD SOMETHING USEFUL</p><h2>Have a thoughtful opportunity?</h2>
             <p className="body-copy">I’m open to internships, junior collaborations, mentorship, and conversations about data, AI, or useful software.</p>
             <div className="contact-links"><a href="https://github.com/abyyogathas-1129" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/kirushnavy-yogathas-81ba1b348" target="_blank" rel="noreferrer">LinkedIn ↗</a><span>Mullaitivu, Sri Lanka</span></div>
-            <p className="client-note">EMAIL · Client to supply a public contact address</p>
+            <a className="client-note" href="mailto:Abyyogathas@gmail.com">EMAIL · Abyyogathas@gmail.com</a>
           </div>
-          <form className="contact-form" onSubmit={submitContact}>
+          <div className="contact-form">
             <h3>Start a conversation</h3>
-            <label><span>Name</span><input name="name" placeholder="Your name" required /></label>
-            <label><span>Email</span><input name="email" type="email" placeholder="you@example.com" required /></label>
-            <label><span>Message</span><textarea name="message" placeholder="Tell me about the opportunity…" required /></label>
-            <button className="button button-primary" type="submit">Send message</button>
-            {sent && <p className="form-status" role="status">Thanks — the form is ready to connect to your email service.</p>}
-          </form>
+            <p className="body-copy">The fastest way to reach me is directly by email — I check it regularly and reply personally.</p>
+            <a className="button button-primary" href="mailto:Abyyogathas@gmail.com?subject=Opportunity%20-%20Portfolio%20Contact">Email me</a>
+          </div>
         </section>
       </main>
 
