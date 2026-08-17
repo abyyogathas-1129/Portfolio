@@ -72,7 +72,7 @@ function App() {
             <img className="orbit orbit-cyan" src={`${import.meta.env.BASE_URL}assets/orbit-cyan.svg`} alt="" />
             <img className="orbit orbit-berry" src={`${import.meta.env.BASE_URL}assets/orbit-berry.svg`} alt="" />
             <img className="orbit orbit-violet" src={`${import.meta.env.BASE_URL}assets/orbit-violet.svg`} alt="" />
-            <div className="portrait"><img className="portrait-photo" src={`${import.meta.env.BASE_URL}assets/portrait.png`} alt="Kirushnavy Yogathas" /></div>
+            <div className="portrait"><img className="portrait-photo" src={`${import.meta.env.BASE_URL}assets/portrait.jpeg`} alt="Kirushnavy Yogathas" /></div>
             <span className="orbit-tag tag-ai">AI</span><span className="orbit-tag tag-data">DATA</span><span className="orbit-tag tag-python">PYTHON</span>
           </div>
         </section>
